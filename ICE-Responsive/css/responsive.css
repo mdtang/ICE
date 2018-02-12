@@ -1,0 +1,28 @@
+@media only screen and (min-width: 650px) {
+  nav>ul>li {
+    display: inline-block;
+  }
+  nav>ul {
+    text-align: center;
+  }
+  .even-smaller-rect {
+    width: 47%;
+    display: inline-block;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  nav>ul {
+    text-align: right;
+  }
+  .even-smaller-rect {
+    width: 22%;
+  }
+  .smaller-rect {
+    width: 47%;
+    display: inline-block;
+  }
+}
+
+
+}
