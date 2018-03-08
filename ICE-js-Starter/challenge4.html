@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Challenge 4</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<style>
+		.errormsg {
+			font-family: 'Roboto', sans-serif;
+			color: red;
+			display: none;
+		}
+	</style>
+
+	<script type="text/javascript">
+		function checkForm() {
+			// Write a function that displays the appropriate error message(s) if a field is left blank.  Make sure the form action is not performed if either field is blank.
+			var fullName = document.querySelector('#fullname').value.trim(); // remove start and end of whitespace, only works on strings
+			var streetAddr = document.querySelector('#streetaddr').value.trim();
+			var nameErrorMsg = document.querySelector("#nameerrormsg");
+			var addErrorMsg = document.querySelector("#adderrormsg");
+
+			var isValid = true;
+			nameErrorMsg.style.display = 'none';
+			addErrorMsg.style.display = 'none';
+
+			if (!fullName) {
+				nameErrorMsg.style.display = 'block';
+				isValid = false;
+			}
+			if (!streetAddr) {
+				addErrorMsg.style.display = 'block';
+				isValid = false;
+			}
+			return isValid;
+		}
+	</script>
+</head>
+
+<body>
+	<h1>Challenge 4</h1>
+	<form action="challenge5.html" onsubmit="return checkForm();">
+		<fieldset>
+			<legend>Personal details</legend>
+			<label for="fullname">Full name: </label>
+			<input type="text" name="fullname" id="fullname"><br/>
+			<p class="errormsg" id="nameerrormsg">Please enter your name above!</p>
+
+			<label for="streetaddr"></label> Street Address:
+			<input type="text" name="streetaddr" id="streetaddr">
+			<p class="errormsg" id="adderrormsg">Please enter your street address!</p>
+		</fieldset>
+		<input type="submit" value="Submit it!">
+	</form>
+</body>
+
+</html>
