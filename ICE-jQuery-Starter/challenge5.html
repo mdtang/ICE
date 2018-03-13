@@ -43,13 +43,20 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
-			$('.preview').on('focus mouseover', function() {
-				$('#image').text($(this).attr('alt'));
-				$('#image').css('background-image', "url(" + $(this).attr('src') + ")");
+			var mainImage = $('#image');
+			var previewImages = $('.preview');
+
+			previewImages.on('focus mouseover', function() {
+				// display the main image's text as the hovered preview image's alt text
+				mainImage.text($(this).attr('alt'));
+				// display the main image's background image as the hovered preview image's img src
+				mainImage.css('background-image', "url(" + $(this).attr('src') + ")");
 			});
-			$('.preview').on('blur mouseleave', function() {
-				$('#image').text('Hover over an image below.');
-				$('#image').css('background-image', "");
+			previewImages.on('blur mouseleave', function() {
+				// resets main image's text
+				mainImage.text('Hover over an image below.');
+				// resets main image's bg image
+				mainImage.css('background-image', "");
 			});
 		});
 	</script>
