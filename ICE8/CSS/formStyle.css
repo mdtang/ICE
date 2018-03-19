@@ -1,0 +1,38 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+form {
+  background: lightblue;
+  width: 50%;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+label, legend {
+  padding: 5px 0;
+}
+
+#accInfo {
+  background: #ade6bb;
+  padding: 10px 10px;
+  border-radius: 10px;
+}
+
+h4 u {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#experience {
+  background: #b4ade6;
+  padding: 10px 10px;
+  border-radius: 10px;
+}
+
+#position {
+  background: #e6bfad;
+  padding: 10px 10px;
+  border-radius: 10px;
+}
